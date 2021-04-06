@@ -1,6 +1,6 @@
 # `ground_track`
 
-Plots the ground track of an orbit given the planetodetic coordinates (i.e. planetodetic latitude and longitude) of the orbit.
+Plots the ground track of an orbit given its planetodetic coordinates (i.e. planetodetic latitude and longitude).
 
 
 ## Syntax
