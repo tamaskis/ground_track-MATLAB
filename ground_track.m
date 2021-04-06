@@ -26,7 +26,7 @@
 %   "[]". For example, if you wanted to specify the color but not the line 
 %   width, you would use "ground_track(lat,lon,color,[],planet)".
 %
-% MATLAB Central File Exchange: 
+% MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89822-ground-track-ground_track
 % GitHub: https://github.com/tamaskis/ground_track-MATLAB
 %
 % See "DOCUMENTATION.pdf" for additional documentation and examples. 
