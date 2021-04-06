@@ -14,15 +14,13 @@ Plots the ground track of an orbit given the planetodetic coordinates (i.e. plan
 
 ## Description
 
-`root = newtons_method(f,df,x0)` returns the root of a function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> specified by the function handle `f`, where `df` is the derivative of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> (i.e. <img src="https://latex.codecogs.com/svg.latex?f'(x)" title="f'(x)" />) and `x0` is an initial guess of the root. The default tolerance and maximum number of iterations are `TOL = 1e-12` and `imax = 1e6`, respectively.
+`ground_track(lat,lon)` plots the ground track of an orbit around the Earth, superimposed on a map of the Earth, where the map just shows the continental outlines. `lat` and `lon` are vectors of geodetic latitude and longitude values. By default, the ground track is drawn in blue with a line width of 1.5.
+            
+`ground_track(lat,lon,color)` does the same as the syntax above, but draws the ground track with the color specified by `color`. By default, a line width of 1.5 is used.
 
-`root = newtons_method(f,df,x0,TOL)` returns the root of a function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> specified by the function handle `f`, where `df` is the derivative of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> (i.e. <img src="https://latex.codecogs.com/svg.latex?f'(x)" title="f'(x)" />), `x0` is an initial guess of the root, and `TOL` is the tolerance. The default maximum number of iterations is `imax = 1e6`.
+`ground_track(lat,lon,color,line_width)` does the same as the previous syntaxes, but draws the ground track with the line width specified by `line_width`. If you would only like to specify the line width, but not the color, use the syntax `ground_track(lat,lon,[],line_width)`.
 
-`root = newtons_method(f,df,x0,[],imax)` returns the root of a function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> specified by the function handle `f`, where `df` is the derivative of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> (i.e. <img src="https://latex.codecogs.com/svg.latex?f'(x)" title="f'(x)" />), `x0` is an initial guess of the root, and `imax` is the maximum number of iterations. The default tolerance is `TOL = 1e-12`.
-
-`root = newtons_method(f,df,x0,TOL,imax)` returns the root of a function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> specified by the function handle `f`, where `df` is the derivative of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> (i.e. <img src="https://latex.codecogs.com/svg.latex?f'(x)" title="f'(x)" />), `x0` is an initial guess of the root, `TOL` is the tolerance, and `imax` is the maximum number of iterations.
-
-`root = newtons_method(__,'all')` returns a vector, where the first element of this vector is the initial guess, all intermediate elements are the intermediate estimates of the root, and the last element is the converged root. This identifier 'all' may be appended to any of the syntaxes used above.
+`ground_track(__,planet` draws the ground track of an orbit around the celestial body specified by `planet`. `planet` can be specified as `'Sun'`, `'Moon'`, `'Mercury'`, `'Venus'`, `'Earth'`, `'Earth Cloudy'`, `'Earth Night'`, `'Earth Night Cloudy'`, `'Earth Continents Outline'`, `'Mars'`, `'Jupiter'`, `'Saturn'`, `'Uranus'`, `'Neptune'`, or `'Pluto'`. Note that if you are specifying `planet`, but choosing not to specify some other parameters, you have to replace the variables you skipped over with "`[]`". For example, if you wanted to specify the color but not the line width, you would use `ground_track(lat,lon,color,[],planet)`.
 
 
 ## Additional Documentation and Examples
