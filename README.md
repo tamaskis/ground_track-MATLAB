@@ -20,7 +20,7 @@ Plots the ground track of an orbit given the planetodetic coordinates (i.e. plan
 
 `ground_track(lat,lon,color,line_width)` does the same as the previous syntaxes, but draws the ground track with the line width specified by `line_width`. If you would only like to specify the line width, but not the color, use the syntax `ground_track(lat,lon,[],line_width)`.
 
-`ground_track(__,planet` draws the ground track of an orbit around the celestial body specified by `planet`. `planet` can be specified as `'Sun'`, `'Moon'`, `'Mercury'`, `'Venus'`, `'Earth'`, `'Earth Cloudy'`, `'Earth Night'`, `'Earth Night Cloudy'`, `'Earth Continents Outline'`, `'Mars'`, `'Jupiter'`, `'Saturn'`, `'Uranus'`, `'Neptune'`, or `'Pluto'`. Note that if you are specifying `planet`, but choosing not to specify some other parameters, you have to replace the variables you skipped over with "`[]`". For example, if you wanted to specify the color but not the line width, you would use `ground_track(lat,lon,color,[],planet)`.
+`ground_track(__,planet)` draws the ground track of an orbit around the celestial body specified by `planet`. `planet` can be specified as `'Sun'`, `'Moon'`, `'Mercury'`, `'Venus'`, `'Earth'`, `'Earth Cloudy'`, `'Earth Night'`, `'Earth Night Cloudy'`, `'Earth Continents Outline'`, `'Mars'`, `'Jupiter'`, `'Saturn'`, `'Uranus'`, `'Neptune'`, or `'Pluto'`. Note that if you are specifying `planet`, but choosing not to specify some other parameters, you have to replace the variables you skipped over with "`[]`". For example, if you wanted to specify the color but not the line width, you would use `ground_track(lat,lon,color,[],planet)`.
 
 
 ## Additional Documentation and Examples
