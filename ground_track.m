@@ -16,11 +16,13 @@
 % included with the download.
 %
 % Copyright (c) 2021 Tamas Kis
-% Last Update: 2021-05-31
+% Last Update: 2021-06-01
 %
 %--------------------------------------------------------------------------
 %
+% -------
 % INPUTS:
+% -------
 %   lat         (nx1 or 1xn) [deg] planetodetic latitude
 %   lon         (nx1 or 1xn) [deg] planetodetic longitude
 %   color       (OPTIONAL) (3x1 or 1x3) [rgb] line color (defaults to
