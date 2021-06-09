@@ -8,31 +8,30 @@
 %   ground_track(lat,lon,color,line_width)
 %   ground_track(__,planet)
 %
+% Copyright © 2021 Tamas Kis
+% Last Update: 2021-06-09
+%
+%--------------------------------------------------------------------------
+%
 % MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89822-ground-track-ground_track
 % GitHub: https://github.com/tamaskis/ground_track-MATLAB
 %
-% See "DOCUMENTATION.pdf" for additional documentation and examples. 
-% Examples can also be found in EXAMPLES.mlx. Both of these files are 
-% included with the download.
-%
-% Copyright (c) 2021 Tamas Kis
-% Last Update: 2021-06-01
+% See EXAMPLES.mlx for examples and "DOCUMENTATION.pdf" for additional 
+% documentation. Both of these files are included with the download.
 %
 %--------------------------------------------------------------------------
 %
 % -------
 % INPUTS:
 % -------
-%   lat         (nx1 or 1xn) [deg] planetodetic latitude
-%   lon         (nx1 or 1xn) [deg] planetodetic longitude
-%   color       (OPTIONAL) (3x1 or 1x3) [rgb] line color (defaults to
-%                                             [0,0.4470,0.7410])
-%   line_width  (OPTIONAL) (1x1) line width (defaults to 1.5)
-%   planet      (OPTIONAL) 'Sun', 'Moon', 'Mercury', 'Venus', 'Earth', 
-%                          'Earth Cloudy', 'Earth Night',
-%                          'Earth Night Cloudy', 
-%                          'Earth Continents Outline', 'Mars', 'Jupiter',
-%                          'Saturn', 'Uranus', 'Neptune', or 'Pluto'
+%   lat         - (n×1 or 1×n) [deg] planetodetic latitude
+%   lon         - (n×1 or 1×n) [deg] planetodetic longitude
+%   color       - (OPTIONAL) (3×1 or 1×3) [rgb] line color
+%   line_width  - (OPTIONAL) (1×1) line width
+%   planet      - (OPTIONAL) (char) 'Sun', 'Moon', 'Mercury', 'Venus', 
+%                 'Earth', 'Earth Cloudy', 'Earth Night', 
+%                 'Earth Night Cloudy', 'Earth Continents Outline', 'Mars',
+%                 'Jupiter', 'Saturn', 'Uranus', 'Neptune', or 'Pluto'
 %
 %==========================================================================
 function ground_track(lat,lon,color,line_width,planet)
