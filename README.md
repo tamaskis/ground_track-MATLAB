@@ -23,6 +23,7 @@ Plots the ground track of an orbit given its planetodetic coordinates (i.e. plan
 `ground_track(__,planet)` draws the ground track of an orbit around the celestial body specified by `planet`. `planet` can be specified as `'Sun'`, `'Moon'`, `'Mercury'`, `'Venus'`, `'Earth'`, `'Earth Cloudy'`, `'Earth Night'`, `'Earth Night Cloudy'`, `'Earth Continents Outline'`, `'Mars'`, `'Jupiter'`, `'Saturn'`, `'Uranus'`, `'Neptune'`, or `'Pluto'`. Note that if you are specifying `planet`, but choosing not to specify some other parameters, you have to replace the variables you skipped over with "`[]`". For example, if you wanted to specify the color but not the line width, you would use `ground_track(lat,lon,color,[],planet)`.
 
 
-## Additional Documentation and Examples
+## Examples and Additional Documentation
 
-See "DOCUMENTATION.pdf" for additional documentation and examples.
+   -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples.
+   -  See "DOCUMENTATION.pdf" for additional documentation.
