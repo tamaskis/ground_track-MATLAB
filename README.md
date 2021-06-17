@@ -25,5 +25,7 @@ Plots the ground track of an orbit given its planetodetic coordinates (i.e. plan
 
 ## Examples and Additional Documentation
 
+## Examples and Additional Documentation
+
    -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples.
    -  See "DOCUMENTATION.pdf" (included with download, also available at https://github.com/tamaskis/ground_track-MATLAB/blob/main/DOCUMENTATION.pdf) for additional documentation.
