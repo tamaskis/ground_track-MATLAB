@@ -11,16 +11,9 @@
 % See also planet3D.
 %
 % Copyright © 2021 Tamas Kis
+% Last Update: 2021-07-25
+% Website: tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
-% Last Update: 2021-07-09
-%
-%--------------------------------------------------------------------------
-%
-% MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89822-ground-track-ground_track
-% GitHub: https://github.com/tamaskis/ground_track-MATLAB
-%
-% See EXAMPLES.mlx for examples and "DOCUMENTATION.pdf" for additional 
-% documentation. Both of these files are included with the download.
 %
 %--------------------------------------------------------------------------
 %
