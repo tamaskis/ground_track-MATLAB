@@ -24,7 +24,7 @@
 %   lon         - (n×1 or 1×n) [deg] planetodetic longitude
 %   color       - (OPTIONAL) (3×1 or 1×3) [rgb] line color
 %   line_width  - (OPTIONAL) (1×1) line width
-%   planet      - (OPTIONAL) (char) 'Blank','Sun', 'Moon', 'Mercury', 
+%   planet      - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 
 %                 'Venus', 'Earth', 'Earth Cloudy', 'Earth Night', 
 %                 'Earth Night Cloudy', 'Earth Continents Outline', 'Mars',
 %                 'Jupiter', 'Saturn', 'Uranus', 'Neptune', or 'Pluto'
