@@ -11,7 +11,7 @@
 % See also planet3D.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2021-07-25
+% Last Update: 2021-08-01
 % Website: tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
 %
@@ -20,9 +20,9 @@
 % ------
 % INPUT:
 % ------
-%   lat         - (n×1 or 1×n) [deg] planetodetic latitude
-%   lon         - (n×1 or 1×n) [deg] planetodetic longitude
-%   color       - (OPTIONAL) (3×1 or 1×3) [rgb] line color
+%   lat         - (n×1 or 1×n) planetodetic latitude [deg]
+%   lon         - (n×1 or 1×n) planetodetic longitude [deg]
+%   color       - (OPTIONAL) (3×1 or 1×3) line color [rgb]
 %   line_width  - (OPTIONAL) (1×1) line width
 %   planet      - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 
 %                 'Venus', 'Earth', 'Earth Cloudy', 'Earth Night', 
