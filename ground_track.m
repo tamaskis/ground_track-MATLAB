@@ -30,8 +30,8 @@
 %   lon     - (n×1 or 1×n double) planetodetic longitude [deg]
 %   opts    - (OPTIONAL) (struct) plot options structure
 %       • color         - (char or 1×3 double) line color
-%                           --> can be specified as a color code (e.g. 'k')
-%                           --> can be specified as an RGB triplet
+%                           --> can be specified as a name, short name, or
+%                               RGB triplet [rgb]
 %       • line_width    - (1×1 double) line width
 %       • line_style	- (char) line style
 %   planet  - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
