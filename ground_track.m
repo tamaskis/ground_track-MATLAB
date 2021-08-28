@@ -3,52 +3,81 @@
 % ground_track  Plots the ground track of an orbit.
 %
 %   ground_track(lat,lon)
-%   ground_track(lat,lon,color)
-%   ground_track(lat,lon,[],line_width)
-%   ground_track(lat,lon,color,line_width)
+%   ground_track(lat,lon,opts)
 %   ground_track(__,planet)
 %
 % See also planet3D.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2021-08-01
-% Website: tamaskis.github.io
+% Last Update: 2021-08-28
+% Website: https://tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
+%
+% IMAGE SOURCES:
+% https://tamaskis.github.io/documentation/Ground_Track_Image_Sources.pdf
+%
+% REFERENCES:
+%   [1] https://www.jpl.nasa.gov/images/pluto-color-map
+%   [2] https://www.solarsystemscope.com/textures/
+%   [3] https://visibleearth.nasa.gov/images/57730/the-blue-marble-land-surface-ocean-color-and-sea-ice/57731l
 %
 %--------------------------------------------------------------------------
 %
 % ------
 % INPUT:
 % ------
-%   lat         - (n×1 or 1×n) planetodetic latitude [deg]
-%   lon         - (n×1 or 1×n) planetodetic longitude [deg]
-%   color       - (OPTIONAL) (3×1 or 1×3) line color [rgb]
-%   line_width  - (OPTIONAL) (1×1) line width
-%   planet      - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 
-%                 'Venus', 'Earth', 'Earth Cloudy', 'Earth Night', 
-%                 'Earth Night Cloudy', 'Earth Continents Outline', 'Mars',
-%                 'Jupiter', 'Saturn', 'Uranus', 'Neptune', or 'Pluto'
+%   lat  	- (n×1 or 1×n double) planetodetic latitude [deg]
+%   lon   	- (n×1 or 1×n double) planetodetic longitude [deg]
+%   opts	- (OPTIONAL) (struct) plot options structure
+%       • color         - (char or 1×3 double) line color
+%                           --> can be specified as a color code (e.g. 'k')
+%                           --> can be specified as an RGB triplet
+%       • line_width    - (1×1 double) line width
+%       • line_style	- (char) line style
+%   planet 	- (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
+%             'Earth', 'Earth Cloudy', 'Earth Coastlines', 'Earth Night', 
+%             'Earth Night Cloudy', 'Mars', 'Jupiter', 'Saturn', 'Uranus',
+%             'Neptune', or 'Pluto'
 %
 %==========================================================================
-function ground_track(lat,lon,color,line_width,planet)
+function ground_track(lat,lon,opts,planet)
     
-    % sets default color to [0,0.4470,0.7410]
-    if (nargin < 3) || isempty(color)
+    % ------------------------------------
+    % Sets (or defaults) plotting options.
+    % ------------------------------------
+    
+    % sets line color (defaults to default MATLAB color)
+    if (nargin < 3) || isempty(opts) || ~isfield(opts,'color')
         color = [0,0.4470,0.7410];
+    else
+        color = opts.color;
     end
     
-    % sets default line width to 1.5
-    if (nargin < 4) || isempty(line_width)
+    % sets line style (defaults to solid line)
+    if (nargin < 3) || isempty(opts) || ~isfield(opts,'line_style')
+        line_style = '-';
+    else
+        line_style = opts.line_style;
+    end
+    
+    % sets line width (defaults to 1.5)
+    if (nargin < 3) || isempty(opts) || ~isfield(opts,'line_width')
         line_width = 1.5;
+    else
+        line_width = opts.line_width;
     end
     
-    % sets default background to outlines of Earth continents
-    if (nargin < 5) || isempty(planet)
-        planet = 'Earth Continents Outline';
+    % sets background (defaults to Earth coastlines)
+    if (nargin < 4) || isempty(planet)
+        planet = 'Earth Coastlines';
     end
+    
+    % --------------------------------------
+    % Draws background of ground track plot.
+    % --------------------------------------
     
     % sets background of ground track plot
-    if strcmpi(planet,'Earth Continents Outline')
+    if strcmpi(planet,'Earth Coastlines')
         
         % loads Earth topographic data
         load('topo.mat','topo');
@@ -136,6 +165,10 @@ function ground_track(lat,lon,color,line_width,planet)
     
     end
     
+    % ----------------------------------------
+    % Plotting ground track / axis formatting.
+    % ----------------------------------------
+    
     % determines indices where ground track crosses figure border (i.e.
     % from 180 to -180 or -180 to 180) to avoid "jumps" in the plot
     j = [];
@@ -153,17 +186,18 @@ function ground_track(lat,lon,color,line_width,planet)
     % plots groundtrack (starts new plot every time ground track crosses
     % left border or right border)
     hold on;
-    plot(lon(1:(j(1)-1)),lat(1:(j(1)-1)),'color',color,'linewidth',...
-        line_width);
+    plot(lon(1:(j(1)-1)),lat(1:(j(1)-1)),'color',color,'linestyle',...
+        line_style,'linewidth',line_width);
     for i = 1:(length(j)-1)
         plot(lon(j(i):(j(i+1)-1)),lat(j(i):(j(i+1)-1)),'color',color,...
-           'linewidth',line_width,'handlevisibility','off');
+           'linestyle',line_style,'linewidth',line_width,...
+           'handlevisibility','off');
     end
 
     % axis formatting
     axis equal
     grid on
-    if strcmpi(planet,'Earth Continents Outline') || strcmpi(planet,...
+    if strcmpi(planet,'Earth Coastlines') || strcmpi(planet,...
             'Blank')
         ax = gca;
         ax.GridColor = [0.35,0.35,0.35];
