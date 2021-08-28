@@ -212,5 +212,5 @@ function ground_track(lat,lon,opts,planet)
         'fontsize',18);
     ylabel('Latitude, $\phi\;[^{\circ}]$','interpreter','latex',...
         'fontsize',18);
-    
+    t
 end
