@@ -26,15 +26,15 @@
 % ------
 % INPUT:
 % ------
-%   lat  	- (n×1 or 1×n double) planetodetic latitude [deg]
-%   lon   	- (n×1 or 1×n double) planetodetic longitude [deg]
-%   opts	- (OPTIONAL) (struct) plot options structure
+%   lat     - (n×1 or 1×n double) planetodetic latitude [deg]
+%   lon     - (n×1 or 1×n double) planetodetic longitude [deg]
+%   opts    - (OPTIONAL) (struct) plot options structure
 %       • color         - (char or 1×3 double) line color
 %                           --> can be specified as a color code (e.g. 'k')
 %                           --> can be specified as an RGB triplet
 %       • line_width    - (1×1 double) line width
 %       • line_style	- (char) line style
-%   planet 	- (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
+%   planet  - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
 %             'Earth', 'Earth Cloudy', 'Earth Coastlines', 'Earth Night', 
 %             'Earth Night Cloudy', 'Mars', 'Jupiter', 'Saturn', 'Uranus',
 %             'Neptune', or 'Pluto'
