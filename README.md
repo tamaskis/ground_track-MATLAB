@@ -41,4 +41,4 @@ Plots the ground track of an orbit given its planetodetic coordinates (i.e. plan
 # Installation
 
    - Open "Ground Track (ground_track).mltbx" in the "INSTALL" folder to install as a toolbox. MATLAB will automatically perform the installation and add the function and all the images to the MATLAB search path.
-   - Alternatively, the "ground_track" folder can be copied to the folder containing the script that you want to use the function in. At the beginning of the script, include "`addpath('ground_track')`" to add the function and all the images to the MATLAB search path.
+   - Alternatively, the "ground_track" folder can be copy and pasted into the folder containing the script that you want to use the function in. At the beginning of the script, include "`addpath('ground_track')`" to add the function and all the images to the MATLAB search path.
