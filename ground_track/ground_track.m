@@ -33,7 +33,7 @@
 %                       --> can be specified as a name, short name, or RGB 
 %                           triplet [rgb]
 %       • LineWidth - (1×1 double) line width
-%       • LineStyle	- (char) line style
+%       • LineStyle - (char) line style
 %   planet  - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
 %             'Earth', 'Earth Cloudy', 'Earth Coastlines', 'Earth Night', 
 %             'Earth Night Cloudy', 'Mars', 'Jupiter', 'Saturn', 'Uranus',
