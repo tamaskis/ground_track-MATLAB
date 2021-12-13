@@ -94,14 +94,14 @@ function ground_track(lat,lon,opts,planet)
         
         % reads in image
         if strcmpi(planet,'Earth Cloudy')
-            cdata = imread('images/earth.png')+imread('images/clouds.png');
+            cdata = imread('earth.png')+imread('clouds.png');
         elseif strcmpi(planet,'Earth Night')
-            cdata = imread('images/earthnight.png');
+            cdata = imread('earthnight.png');
         elseif strcmpi(planet,'Earth Night Cloudy')
-            cdata = imread('images/earthnight.png')+0.1*...
-                imread('images/clouds.png');
+            cdata = imread('earthnight.png')+0.1*...
+                imread('clouds.png');
         else
-            cdata = imread(strcat('images/',lower(planet),'.png'));
+            cdata = imread(strcat(lower(planet),'.png'));
         end
         
         % plots background
