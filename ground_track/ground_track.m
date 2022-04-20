@@ -9,17 +9,12 @@
 % See also planet3D.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2021-12-12
+% Last Update: 2022-04-20
 % Website: https://tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
 %
 % IMAGE SOURCES:
 % https://tamaskis.github.io/documentation/Ground_Track_Image_Sources.pdf
-%
-% REFERENCES:
-%   [1] https://www.jpl.nasa.gov/images/pluto-color-map
-%   [2] https://www.solarsystemscope.com/textures/
-%   [3] https://visibleearth.nasa.gov/images/57730/the-blue-marble-land-surface-ocean-color-and-sea-ice/57731l
 %
 %--------------------------------------------------------------------------
 %
@@ -28,13 +23,13 @@
 % ------
 %   lat     - (1D double array) planetodetic latitude [deg]
 %   lon     - (1D double array) planetodetic longitude [deg]
-%   opts    - (OPTIONAL) (1×1 struct) plot options
+%   opts    - (1×1 struct) (OPTIONAL) plot options
 %       • Color     - (char or 1×3 double) line color
 %                       --> can be specified as a name, short name, or RGB 
 %                           triplet [rgb]
 %       • LineWidth - (1×1 double) line width
 %       • LineStyle - (char) line style
-%   planet  - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
+%   planet  - (char) (OPTIONAL) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
 %             'Earth', 'Earth Cloudy', 'Earth Coastlines', 'Earth Night', 
 %             'Earth Night Cloudy', 'Mars', 'Jupiter', 'Saturn', 'Uranus',
 %             'Neptune', or 'Pluto'
@@ -81,11 +76,11 @@ function ground_track(lat,lon,opts,planet)
         
         % loads Earth topographic data
         load('topo.mat','topo');
-
+        
         % rearranges Earth topopgrahic data so it goes from -180 to 180 
         % deg longitude
         topoplot = [topo(:,181:360),topo(:,1:180)];
-
+        
         % plots Earth map by making a contour plot of topographic data at
         % elevation of 0
         contour(-180:179,-90:89,topoplot,[0,0],'black');
@@ -162,7 +157,7 @@ function ground_track(lat,lon,opts,planet)
             plot([-180,180],[-90+i*30,-90+i*30],'color',GridColor,...
                 'LineWidth',GridLineWidth,'LineStyle',':');
         end
-    
+        
     end
     
     % ----------------------------------------
@@ -193,7 +188,7 @@ function ground_track(lat,lon,opts,planet)
            'LineStyle',LineStyle,'LineWidth',LineWidth,...
            'HandleVisibility','off');
     end
-
+    
     % axis formatting
     axis equal
     grid on
