@@ -30,7 +30,7 @@ Plots the ground track of an orbit given its planetodetic coordinates (i.e. plan
 ## Examples and Image Sources
 
    -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples.
-   -  See ["Ground_Track_Image_Sources.pdf"](https://tamaskis.github.io/documentation/Ground_Track_Image_Sources.pdf) (also included with download) for the image sources.
+   -  See ["Ground_Track_Image_Sources.pdf"](https://tamaskis.github.io/files/Ground_Track_Image_Sources.pdf) (also included with download) for the image sources.
 
 
 

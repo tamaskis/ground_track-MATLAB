@@ -9,12 +9,12 @@
 % See also planet3D.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2022-04-20
+% Last Update: 2022-07-06
 % Website: https://tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
 %
 % IMAGE SOURCES:
-% https://tamaskis.github.io/documentation/Ground_Track_Image_Sources.pdf
+% https://tamaskis.github.io/files/Ground_Track_Image_Sources.pdf
 %
 %--------------------------------------------------------------------------
 %
@@ -23,13 +23,13 @@
 % ------
 %   lat     - (1D double array) planetodetic latitude [deg]
 %   lon     - (1D double array) planetodetic longitude [deg]
-%   opts    - (1×1 struct) (OPTIONAL) plot options
+%   opts    - (OPTIONAL) (1×1 struct) plot options
 %       • Color     - (char or 1×3 double) line color
 %                       --> can be specified as a name, short name, or RGB 
 %                           triplet [rgb]
 %       • LineWidth - (1×1 double) line width
 %       • LineStyle - (char) line style
-%   planet  - (char) (OPTIONAL) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
+%   planet  - (OPTIONAL) (char) 'Blank', 'Sun', 'Moon', 'Mercury', 'Venus',
 %             'Earth', 'Earth Cloudy', 'Earth Coastlines', 'Earth Night', 
 %             'Earth Night Cloudy', 'Mars', 'Jupiter', 'Saturn', 'Uranus',
 %             'Neptune', or 'Pluto'
